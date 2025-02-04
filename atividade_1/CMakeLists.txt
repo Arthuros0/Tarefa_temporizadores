@@ -46,7 +46,8 @@ pico_enable_stdio_usb(atividade_1 1)
 
 # Add the standard library to the build
 target_link_libraries(atividade_1
-        pico_stdlib)
+        pico_stdlib
+        hardware_timer)
 
 # Add the standard include files to the build
 target_include_directories(atividade_1 PRIVATE
