@@ -15,12 +15,16 @@ int main(){
   init_leds();
   init_button();
 
+  uint8_t intervalo=200;
+  absolute_time_t button_debounce=delayed_by_ms(get_absolute_time(),intervalo);
+
   while(1){
+    if(time_reached(button_debounce)){
 
-    if(!gpio_get(BUTTON) && !gpio_get(leds[2])){
+      if(!gpio_get(BUTTON) && !gpio_get(leds[2])){
       liga_leds();
-
       add_alarm_in_ms(3000,turn_off_callback,NULL,false);
+      }
     }
     sleep_ms(10);
   }
