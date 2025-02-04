@@ -30,7 +30,6 @@ O objetivo desta atividade é criar um sistema que aciona três LEDs ao pression
 - **Microcontrolador RP 2040**
 - **Raspberry Pi Pico W**
 - **LED RGB**
-- **Matriz de LED RGB**
 - **Push Buttons**
 
 ### Software
